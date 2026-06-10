@@ -1,15 +1,31 @@
-title: Chris Buckley
-description: Skeleton repository used to create gh-pages branch for showcased projects
+title: Vincent James Construction Ltd
+description: builders of exceptional homes across Cheshire. Bespoke new builds, architectural extensions and full refurbishments delivered to the highest standard.
 
-url: https://cmbuckley.co.uk
-baseurl: /showcase-skeleton
+url: https://vincentjames.co.uk
+repository: cmbuckley/vincentjames.co.uk
 
-repository: cmbuckley/showcase-skeleton
-remote_theme: "cmbuckley/cmbuckley.github.io"
+company:
+  short_name: Vincent James
+  number: 16462966
+  vat: 502634425
+  tel: 01606 633101
+  email: projects@vincentjames.co.uk
+  location: Cheshire
+  analytics: G-XH066NY7KM
+  stats:
+    experience: 22
+    value: 17
+    projects: 47
 
-plugins:
-  - jekyll-github-metadata
-  - jekyll-remote-theme
-
-markdown: kramdown
-highlighter: rouge
+nav:
+- url: /
+  title: Home
+- url: /services.html
+  title: Services
+- url: /projects.html
+  title: Projects
+- url: /about.html
+  title: About
+- url: /contact.html
+  class: nav-cta
+  title: Enquire

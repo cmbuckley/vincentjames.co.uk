@@ -1,0 +1,92 @@
+---
+layout: default
+title: Contact
+---
+<section class="banner" style="min-height:46vh;background:linear-gradient(rgba(43,51,56,.5),rgba(43,51,56,.65)),url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1800&q=80') center/cover">
+  <div class="wrap">
+    <div>
+      <span class="crumb">Home / Contact</span>
+      <h1>Let’s Talk</h1>
+    </div>
+  </div>
+</section>
+
+<section class="section section--paper">
+  <div class="wrap contact-grid">
+    <div>
+      <span class="eyebrow">Arrange a Consultation</span>
+      <h2>Tell us about your <span class="serif-accent">project</span></h2>
+      <p class="lead" style="font-size:1.15rem">Share your vision and we’ll be in touch to discuss your site, brief and budget — with no obligation.</p>
+      <div style="margin-top:40px">
+        <div class="info-row"><span class="ic">&#9742;</span><div><b>Telephone</b><span><a href="tel:{{ site.company.tel | replace_first: "0","+44" | replace: " ","" }}">{{ site.company.tel }}</a></span></div></div>
+        <div class="info-row"><span class="ic">&#9993;</span><div><b>Email</b><span><a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a></span></div></div>
+        <div class="info-row"><span class="ic">&#9873;</span><div><b>Area Covered</b><span>{{ site.company.location }} &amp; surrounding counties</span></div></div>
+      </div>
+    </div>
+
+    <div>
+      <form id="enquiry-form">
+        <!-- Web3Forms access key: replace the value below with the key emailed to you from https://web3forms.com (enter projects@vincentjames.co.uk to get it). -->
+        <input type="hidden" name="access_key" value="REPLACE_WITH_YOUR_WEB3FORMS_ACCESS_KEY">
+        <input type="hidden" name="subject" value="New website enquiry — Vincent James Construction">
+        <input type="hidden" name="from_name" value="Vincent James Construction Website">
+        <!-- Honeypot anti-spam field (hidden from people) -->
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+        <label for="fname">Name</label>
+        <input id="fname" name="name" type="text" required placeholder="Your name">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required placeholder="you@example.com">
+        <label for="phone">Telephone</label>
+        <input id="phone" name="phone" type="tel" placeholder="Your number">
+        <label for="details">Project Details</label>
+        <textarea id="details" name="details" rows="4" required placeholder="A few words about what you have in mind..."></textarea>
+        <button class="btn btn--ink" type="submit" id="enquiry-submit">Send Enquiry</button>
+        <p id="msg" style="display:none;margin-top:20px;color:var(--copper-deep);font-family:var(--serif);font-size:1.3rem;font-style:italic">Thank you — your enquiry has been received. We’ll be in touch shortly.</p>
+        <p id="msg-err" style="display:none;margin-top:20px;color:#a8423a;font-size:.95rem">Sorry, something went wrong. Please call {{ site.company.tel }} or email {{ site.company.email }}.</p>
+      </form>
+      <script>
+      document.getElementById('enquiry-form').addEventListener('submit', async function (e) {
+        e.preventDefault();
+        var form = e.target, btn = document.getElementById('enquiry-submit');
+        var ok = document.getElementById('msg'), err = document.getElementById('msg-err');
+        ok.style.display = 'none'; err.style.display = 'none';
+        btn.disabled = true; btn.textContent = 'Sending…';
+        try {
+          var res = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: { 'Accept': 'application/json' },
+            body: new FormData(form)
+          });
+          var data = await res.json();
+          if (data.success) { ok.style.display = 'block'; form.reset(); }
+          else { err.style.display = 'block'; }
+        } catch (_) { err.style.display = 'block'; }
+        btn.disabled = false; btn.textContent = 'Send Enquiry';
+      });
+      </script>
+    </div>
+  </div>
+</section>
+
+<section class="map-grid">
+  <div class="copy">
+    <span class="eyebrow">Where We Work</span>
+    <h2>Proudly based in <span class="serif-accent">{{ site.company.location }}</span></h2>
+    <p style="color:#cdd2d2">We undertake projects across {{ site.company.location }} and the surrounding counties. Get in touch to check we cover your area.</p>
+    <div class="areas">
+      <span>Knutsford</span> <span>Wilmslow</span> <span>Alderley Edge</span>
+      <span>Chester</span> <span>Tarporley</span> <span>Macclesfield</span>
+      <span>Northwich</span> <span>Frodsham</span> <span>Nantwich</span>
+    </div>
+  </div>
+  <div class="map-embed">
+    <!-- To pin a specific location instead, replace the src with a Google Maps "Embed a map" iframe link. -->
+    <iframe
+      title="{{ site.title }} service area — {{ site.company.location }}"
+      src="https://maps.google.com/maps?q={{ site.company.location }},%20United%20Kingdom&z=10&output=embed"
+      style="width:100%;height:100%;min-height:380px;border:0;display:block"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      allowfullscreen></iframe>
+  </div>
+</section>

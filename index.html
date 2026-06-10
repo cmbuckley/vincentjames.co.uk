@@ -1,0 +1,149 @@
+---
+layout: default
+---
+<section class="hero">
+  <!-- VIDEO HERO: drop a file at assets/hero.mp4 to activate. Falls back to the background image until then. -->
+  <video class="hero-bg" autoplay muted loop playsinline poster="assets/nr-hero.jpg">
+    <source src="assets/hero.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="wrap">
+    <span class="eyebrow eyebrow--hero">Fine Homebuilders &middot; {{ site.company.location }}</span>
+    <h1><span class="serif-accent">Your vision.</span> Our Craftsmanship</h1>
+    <div class="hero-services">
+      <span>New Builds</span><span class="hs-dot">&middot;</span>
+      <span>Extensions</span><span class="hs-dot">&middot;</span>
+      <span>Renovations</span>
+    </div>
+    <div class="hero-actions">
+      <a class="btn" href="/projects.html">View Our Work</a>
+      <a class="btn btn--line" href="/contact.html">Start a Conversation</a>
+    </div>
+  </div>
+  <span class="scroll-hint">Scroll</span>
+</section>
+
+<section class="section--ink" style="padding:46px 0">
+  <div class="wrap">
+    <div class="statbar">
+      <div class="stat"><div class="big" data-count="{{ site.company.stats.experience }}">{{ site.company.stats.experience }}</div><div class="lbl">Years Experience</div></div>
+      <div class="stat"><div class="big" data-count="{{ site.company.stats.value }}" data-prefix="£" data-suffix="m">£{{ site.company.stats.value }}m</div><div class="lbl">Delivered</div></div>
+      <div class="stat"><div class="big" data-count="{{ site.company.stats.projects }}">{{ site.company.stats.projects }}</div><div class="lbl">Projects</div></div>
+      <div class="stat"><div class="big" data-count="100" data-suffix="%">100%</div><div class="lbl">Insured</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--paper">
+  <div class="wrap split">
+    <img src="assets/nr-practice.jpg" alt="Refined open-plan interior, Northwich Road">
+    <div>
+      <span class="eyebrow">Our Ethos</span>
+      <h2>A builder who thinks like an <span class="serif-accent">architect</span></h2>
+      <p class="lead">We partner with leading architects and discerning clients to deliver homes of genuine ambition. Every project is led personally, managed meticulously, and finished to a standard we are proud to put our name to.</p>
+      <a class="btn btn--ink" href="/about.html" style="margin-top:14px">Our Approach</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--dark">
+  <div class="wrap">
+    <div class="split tight" style="align-items:center">
+      <div>
+        <span class="eyebrow">What We Do</span>
+        <h2 style="max-width:18ch;margin-bottom:0">Whole-build expertise, single point of contact</h2>
+      </div>
+      <img src="assets/vjc-teamphoto.jpeg" alt="The {{ site.title }} team" style="border-radius:6px">
+    </div>
+    <div class="svc" style="border-color:rgba(255,255,255,.18);margin-top:60px">
+      <div class="svc-row" style="border-color:rgba(255,255,255,.18)">
+        <span class="idx">01</span><h3 style="color:#fff">Bespoke New Builds</h3>
+        <p style="color:#cdd2d2">Homes built from the ground up to your architect’s vision — eco-friendly, energy-efficient and exquisitely finished.</p>
+      </div>
+      <div class="svc-row" style="border-color:rgba(255,255,255,.18)">
+        <span class="idx">02</span><h3 style="color:#fff">Architectural Extensions</h3>
+        <p style="color:#cdd2d2">Single and double-storey extensions, wrap-arounds and glazed additions that transform how you live in your home.</p>
+      </div>
+      <div class="svc-row" style="border-color:rgba(255,255,255,.18)">
+        <span class="idx">03</span><h3 style="color:#fff">Full Refurbishment</h3>
+        <p style="color:#cdd2d2">Complete renovations, barn conversions and the careful restoration of period and listed properties.</p>
+      </div>
+      <div class="svc-row" style="border-color:rgba(255,255,255,.18)">
+        <span class="idx">04</span><h3 style="color:#fff">Project Management</h3>
+        <p style="color:#cdd2d2">Programme, budget and trades coordinated meticulously end to end, keeping your build on time, on budget and stress-free.</p>
+      </div>
+    </div>
+    <a class="btn" href="/services.html" style="margin-top:46px">All Services</a>
+  </div>
+</section>
+
+<section class="section section--sand">
+  <div class="wrap">
+    <span class="eyebrow center" style="text-align:center">Featured Project</span>
+    <h2 class="center" style="margin-bottom:50px">Northwich Road, <span class="serif-accent">Hartford</span></h2>
+    <div class="feature">
+      <img src="assets/nr-feature.jpg" alt="Northwich Road, Hartford — bespoke new build">
+      <div class="body">
+        <span class="eyebrow">Bespoke New Build</span>
+        <p class="lead" style="font-size:1.15rem">A luxury, individually-designed four-bedroom detached home, built to an exacting specification in the sought-after village of Hartford.</p>
+        <div class="spec">
+          <div><b>Location</b><span>Hartford, Cheshire</span></div>
+          <div><b>Type</b><span>Detached New Build</span></div>
+          <div><b>Bedrooms</b><span>Four Double</span></div>
+          <div><b>Scope</b><span>Turn-key Build</span></div>
+        </div>
+        <p style="color:var(--slate-deep)">Open-plan kitchen, dining and living space, a principal suite with dressing room and en-suite, integral garage, electric gates and a south-facing rear garden — finished to the highest standard throughout.</p>
+        <a class="btn btn--ink" href="/projects.html#northwich-road" style="margin-top:10px">Explore This Build</a>
+        &nbsp;
+        <a class="btn btn--line" href="/projects.html" style="margin-top:10px">All Projects</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--paper">
+  <div class="wrap">
+    <span class="eyebrow">Client Stories</span>
+    <h2 style="max-width:18ch">What our clients <span class="serif-accent">say</span></h2>
+    <!-- Replace quotes, names and locations with your real client testimonials. -->
+    <div class="tgrid">
+      <div class="tcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"They managed our build from foundations to finish. Tidy, professional and completed to a standard beyond what we hoped for."</p>
+        <div class="who"><b>Mr Grant</b><span>Stanthorne, Cheshire</span></div>
+      </div>
+      <div class="tcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"Excellent groundworks and foundations for our new build. Clear pricing and great communication throughout."</p>
+        <div class="who"><b>Self-Build Client</b><span>Chester</span></div>
+      </div>
+      <div class="tcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"A flawless extension and refurbishment. Vincent and the team treated our home as if it were their own."</p>
+        <div class="who"><b>Private Client</b><span>Wilmslow</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--ink">
+  <div class="wrap">
+    <span class="eyebrow">Why {{ site.company.short_name }}</span>
+    <h2 style="color:#fff;max-width:20ch">Assurance built into every <span class="serif-accent">project</span></h2>
+    <div class="guarantees">
+      <div class="g"><div class="gi">&#9874;</div><h3>Fixed Pricing</h3><p>A clear, detailed quotation agreed before we begin — no surprises, no creeping costs.</p></div>
+      <div class="g"><div class="gi">&#9873;</div><h3>Insurance-Backed</h3><p>Fully insured works with warranty cover, so your investment is protected from day one.</p></div>
+      <div class="g"><div class="gi">&#9737;</div><h3>One Point of Contact</h3><p>A single dedicated lead managing trades, programme and budget from foundations to finish.</p></div>
+      <div class="g"><div class="gi">&#10003;</div><h3>Accredited Trades</h3><p>Vetted, qualified craftspeople and full compliance with current building standards.</p></div>
+    </div>
+  </div>
+</section>
+
+<sectioo class="section section--dark center">
+  <div class="wrap">
+    <span class="eyebrow">Let’s Build Something Remarkable</span>
+    <h2 style="max-width:20ch;margin:0 auto 22px">Have a project in mind? We’d love to hear about it.</h2>
+    <p class="lead">Arrange a consultation and we’ll talk through your vision, site and budget.</p>
+    <a class="btn" href="/contact.html" style="margin-top:30px">Enquire Now</a>
+  </div>
+</section>
