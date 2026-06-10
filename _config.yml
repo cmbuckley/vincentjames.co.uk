@@ -1,0 +1,15 @@
+title: Chris Buckley
+description: Skeleton repository used to create gh-pages branch for showcased projects
+
+url: https://cmbuckley.co.uk
+baseurl: /showcase-skeleton
+
+repository: cmbuckley/showcase-skeleton
+remote_theme: "cmbuckley/cmbuckley.github.io"
+
+plugins:
+  - jekyll-github-metadata
+  - jekyll-remote-theme
+
+markdown: kramdown
+highlighter: rouge
