@@ -7,13 +7,13 @@
 <meta name="description" content="{{ site.title }} — {{ site.description }}">
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link rel="stylesheet" href="/style.css">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-7651336701"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.company.gtm }}"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'AW-7651336701');
+  gtag('config', '{{ site.company.gtm }}');
 </script>
 </head>
 <body>
@@ -21,46 +21,46 @@
 <div id="loader"><svg viewBox="0 0 200 92" xmlns="http://www.w3.org/2000/svg"><path class="lpath" d="M76 56 L76 34 L100 16 L124 34 L124 56"/><text class="lword" x="100" y="82" text-anchor="middle">VINCENT JAMES</text></svg></div>
 
 <header class="site-header solid">
-<div class="wrap nav">
-<a class="brand" href="/"><svg class="brandmark" viewBox="0 0 300 70" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{{ site.title }}"><path d="M22 30 L22 16 L40 4 L58 16 L58 30" fill="none" stroke="#d79b7f" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/><text x="150" y="42" text-anchor="middle" font-family="'Cormorant Garamond',Georgia,serif" font-size="30" letter-spacing="3" fill="#efe9e2">VINCENT JAMES</text><text x="150" y="58" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="9.5" letter-spacing="5.5" fill="#d79b7f">CONSTRUCTION LTD</text></svg></a>
-<button class="menu-toggle" onclick="document.getElementById('menu').classList.toggle('open')">&#9776;</button>
-<ul class="menu" id="menu">
-{%- for link in site.nav %}
-<li><a href="{{ link.url }}"
-{%- if link.class %} class="{{ link.class }}"
-{%- elsif page.url == link.url %} class="active"
-{%- endif %}>{{ link.title }}</a></li>
-{%- endfor %}
-</ul>
-</div>
+  <div class="wrap nav">
+    <a class="brand" href="/"><svg class="brandmark" viewBox="0 0 300 70" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{{ site.title }}"><path d="M22 30 L22 16 L40 4 L58 16 L58 30" fill="none" stroke="#d79b7f" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/><text x="150" y="42" text-anchor="middle" font-family="'Cormorant Garamond',Georgia,serif" font-size="30" letter-spacing="3" fill="#efe9e2">VINCENT JAMES</text><text x="150" y="58" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="9.5" letter-spacing="5.5" fill="#d79b7f">CONSTRUCTION LTD</text></svg></a>
+    <button class="menu-toggle" onclick="document.getElementById('menu').classList.toggle('open')">&#9776;</button>
+    <ul class="menu" id="menu">
+    {%- for link in site.nav %}
+      <li><a href="{{ link.url }}"
+        {%- if link.class %} class="{{ link.class }}"
+        {%- elsif page.url == link.url %} class="active"
+        {%- endif %}>{{ link.title }}</a></li>
+    {%- endfor %}
+    </ul>
+  </div>
 </header>
 
 {{ content }}
 
 <footer class="site-footer">
-<div class="wrap">
-<div class="foot-grid">
-<div>
-<a class="brand" href="/"><svg class="brandmark" viewBox="0 0 300 70" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{{ site.title }}"><path d="M22 30 L22 16 L40 4 L58 16 L58 30" fill="none" stroke="#d79b7f" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/><text x="150" y="42" text-anchor="middle" font-family="'Cormorant Garamond',Georgia,serif" font-size="30" letter-spacing="3" fill="#efe9e2">VINCENT JAMES</text><text x="150" y="58" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="9.5" letter-spacing="5.5" fill="#d79b7f">CONSTRUCTION LTD</text></svg></a>
-<p style="max-width:340px">Builders of exceptional homes across {{ site.company.location }} — bespoke new builds, architectural extensions and fine refurbishments.</p>
-</div>
-<div><h4>Navigate</h4><ul>
-{%- for link in site.nav %}
-<li><a href="{{ link.url }}">{{ link.title }}</a></li>
-{%- endfor %}
-</ul></div>
-<div><h4>Get in Touch</h4><ul>
-<li><a href="tel:{{ site.company.tel | replace_first: "0","+44" | replace: " ","" }}">{{ site.company.tel }}</a></li>
-<li><a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a></li>
-<li>{{ site.company.location }}, United Kingdom</li>
-</ul></div>
-</div>
-<div class="foot-bottom">
-<span>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</span>
-<span><a href="/privacy.html">Privacy</a> &middot; <a href="/terms.html">Terms</a></span>
-<span>Co. No. {{ site.company.number }} &middot; VAT {{ site.company.vat }}</span>
-</div>
-</div>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="/"><svg class="brandmark" viewBox="0 0 300 70" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{{ site.title }}"><path d="M22 30 L22 16 L40 4 L58 16 L58 30" fill="none" stroke="#d79b7f" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/><text x="150" y="42" text-anchor="middle" font-family="'Cormorant Garamond',Georgia,serif" font-size="30" letter-spacing="3" fill="#efe9e2">VINCENT JAMES</text><text x="150" y="58" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="9.5" letter-spacing="5.5" fill="#d79b7f">CONSTRUCTION LTD</text></svg></a>
+        <p style="max-width:340px">Builders of exceptional homes across {{ site.company.location }} — bespoke new builds, architectural extensions and fine refurbishments.</p>
+      </div>
+      <div><h4>Navigate</h4><ul>
+      {%- for link in site.nav %}
+        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+      {%- endfor %}
+      </ul></div>
+      <div><h4>Get in Touch</h4><ul>
+        <li><a href="tel:{{ site.company.tel | replace_first: "0","+44" | replace: " ","" }}">{{ site.company.tel }}</a></li>
+        <li><a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a></li>
+        <li>{{ site.company.location }}, United Kingdom</li>
+      </ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</span>
+      <span><a href="/privacy.html">Privacy</a> &middot; <a href="/terms.html">Terms</a></span>
+      <span>Co. No. {{ site.company.number }} &middot; VAT {{ site.company.vat }}</span>
+    </div>
+  </div>
 </footer>
 
 <div id="cookie"><p>We use cookies to give you the best experience and, with analytics, to understand how the site is used. See our <a href="/privacy.html">Cookie &amp; Privacy Policy</a>.</p><button class="cookie-accept">Accept</button></div>
